@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>User Auth Test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/app/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="/app/bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="/app/app.css">
+  <link rel="stylesheet" href="/app/lib/foundation-5.5.2/css/foundation.css">
+  <script src="/app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body ng-controller="ApplicationController">
+
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a>User Auth Test</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="#/login">Login</a></li>
+      </ul>
+      <ul class="left">
+        <li><a href="#/test-page">Test Page</a></li>
+      </ul>
+      <ul class="right">
+        <li><a>Logged in as {{ currentUser.id }} with role {{ currentUser.role }}</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <div class="row">
+    <div ng-view></div>
+  </div>
+
+  <script src="/app/bower_components/angular/angular.js"></script>
+  <script src="/app/bower_components/angular-route/angular-route.js"></script>
+  <script src="/app/bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="/app/bower_components/angular-foundation/mm-foundation.js"></script>
+  <script src="/app/bower_components/angular-foundation/mm-foundation-tpls.js"></script>
+  <script src="/app/app.module.js"></script>
+  <script src="/app/login/login.js"></script>
+  <script src="/app/test-page/testPage.js"></script>
+  <script src="/app/components/version/version.js"></script>
+  <script src="/app/components/version/version-directive.js"></script>
+  <script src="/app/components/version/interpolate-filter.js"></script>
+
+  <script src="/app/lib/foundation-5.5.2/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+</body>
+</html>

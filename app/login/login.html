@@ -1,0 +1,19 @@
+<div class="large-4 columns">
+  <label>User Name
+    <input type="text" placeholder="enter username" ng-model="credentials.username" />
+  </label>
+  <label>Password
+    <input type="password" placeholder="enter password" ng-model="credentials.password" />
+  </label>
+  <a class="button round" ng-click="login(credentials)">{{ loginText }}</a>
+
+  <a ng-click="openLoginModal()">Open modal</a>
+</div>
+
+
+
+<script type="text/ng-template" id="login-modal.html">
+  <h3>You logged in!</h3>
+  <button class="button" ng-click="ok()">OK</button>
+  <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+</script>
